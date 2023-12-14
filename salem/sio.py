@@ -1172,7 +1172,7 @@ def open_mf_wrf_dataset(paths, chunks=None, compat='no_conflicts', lock=None,
 
     # TODO: current workaround to dask thread problems
     import dask
-    dask.config.set(scheduler='single-threaded')
+    # dask.config.set(scheduler='single-threaded')
 
     if lock is None:
         lock = NETCDF4_PYTHON_LOCK
